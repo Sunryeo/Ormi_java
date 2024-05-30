@@ -1,4 +1,4 @@
-public class Test {
+public class Test implements TestInterface{
 
   public static void main(String[] args) {
     char c1 = 'A';
@@ -18,5 +18,10 @@ public class Test {
     System.out.println(c5);
     System.out.println(c6);
     System.out.println(uniCode);
+  }
+
+  @Override
+  public void test() {
+
   }
 }
