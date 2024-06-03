@@ -1,3 +1,5 @@
+package Java240531;
+
 public class Java09 {
   public static void main(String[] args) {
     String result = "";
@@ -5,10 +7,10 @@ public class Java09 {
     result += "Hello";
     result += "java";
     result += "World";
-    System.out.println(result);
+//    System.out.println(result);
 
     StringBuilder sb = new StringBuilder();
-    sb.append("Hello");
+    sb.append("Hello"); // 문자열 끝에 추가
     sb.append("java");
     sb.append("World");
     System.out.println(sb);
@@ -21,7 +23,7 @@ public class Java09 {
 
     StringBuffer sb2 = new StringBuffer();
     sb2.append("Hello");
-    sb2.insert(0, "World");
+    sb2.insert(0, "World"); // 문자열 중간에 삽입
     System.out.println(sb2);
   }
 }

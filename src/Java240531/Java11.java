@@ -1,3 +1,5 @@
+package Java240531;
+
 public class Java11 {
   public static void main(String[] args) {
     int positive = 10;

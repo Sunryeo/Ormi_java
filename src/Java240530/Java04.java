@@ -1,3 +1,5 @@
+package Java240530;
+
 public class Java04 {
   public static void main(String[] args) {
     boolean isTrue = true;

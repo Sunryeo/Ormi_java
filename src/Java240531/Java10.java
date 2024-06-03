@@ -1,3 +1,5 @@
+package Java240531;
+
 public class Java10 {
     public static void main(String[] args) {
         int[] arr = new int[100];

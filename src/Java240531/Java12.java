@@ -1,3 +1,5 @@
+package Java240531;
+
 public class Java12 {
   public static void main(String[] args) {
     boolean isRaining = true;

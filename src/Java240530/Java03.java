@@ -1,3 +1,5 @@
+package Java240530;
+
 public class Java03 {
   public static void main(String[] args) {
     short sVal = 10;

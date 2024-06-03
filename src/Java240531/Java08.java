@@ -1,3 +1,5 @@
+package Java240531;
+
 public class Java08 {
   public static void main(String[] args) {
     String name1 = "Tim";
