@@ -13,5 +13,5 @@ public class CodeTest2 {
   속도가 61 이상이라면 벌금은 100원입니다.
   만약 휴일이라면 속도가 65라도 벌금은 0원입니다.*/
 
-  static int speedRacer(int speed, boolean isHoliday) {}
+//  static int speedRacer(int speed, boolean isHoliday) {}
 }

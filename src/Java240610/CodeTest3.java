@@ -9,5 +9,5 @@ public class CodeTest3 {
    *
    * <p>twoSumOne(1, 2, 3) --->true twoSumOne(3, 1, 2) --->true twoSumOne(3, 2, 2) --->false
    */
-  public static boolean twoSumOne(int a, int b, int c) {}
+//  public static boolean twoSumOne(int a, int b, int c) {}
 }
