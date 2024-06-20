@@ -22,16 +22,17 @@ public abstract class ShoppingMall<T extends Product> {
       }
 
       if (products[length - 1] != null) {
-        makeNewProductArr(product, length);
+        products = makeNewProductArr(product, length);
+        break;
       }
     }
   }
 
   // 메서드 오버로딩
   public void removeProduct(T product) {
-    for (T el : products) {
-      if (el.equals(product)) {
-        el = null;
+    for (int i = 0; i < products.length; i++) {
+      if (products[i] != null && products[i].equals(product)) {
+        products[i] = null;
         break;
       }
     }
@@ -39,9 +40,9 @@ public abstract class ShoppingMall<T extends Product> {
 
   // 메서드 오버로딩
   public void removeProduct(String name) {
-    for (T el : products) {
-      if (el.getName() == name) {
-        el = null;
+    for (int i = 0; i < products.length; i++) {
+      if (products[i] != null && products[i].getName().equals(name)) {
+        products[i] = null;
         break;
       }
     }
@@ -54,18 +55,20 @@ public abstract class ShoppingMall<T extends Product> {
         System.out.println("상품명: " + product.getName());
         System.out.println("상품 가격: " + product.getPrice());
         System.out.println("재고: " + product.getStock());
-        System.out.println("=====================");
+        System.out.println("-----------------------");
       }
     }
   }
 
   public abstract boolean checkOrderAvailability();
 
-  private void makeNewProductArr(T product, int originLength) {
-    T[] newProducts = (T[]) (new Object[originLength * 2]);
-    for (int j = 0; j < newProducts.length; j++) {
+  private T[] makeNewProductArr(T product, int originLength) {
+    T[] newProducts = (T[]) (new Product[originLength * 2]);
+    for (int j = 0; j < products.length; j++) {
       newProducts[j] = products[j];
     }
     newProducts[originLength] = product;
+
+    return newProducts;
   }
 }
