@@ -2,8 +2,8 @@ package Java240613;
 
 public class Cat extends Animal {
 
-  public Cat() {
-    this.kind = "포유류";
+  public Cat(String kind) {
+    super(kind);
   }
 
   @Override
