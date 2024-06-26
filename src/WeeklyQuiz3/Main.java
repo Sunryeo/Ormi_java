@@ -43,26 +43,27 @@ public class Main {
     bookStack.pushBook(book1);
 
     List<Book<String>> searchResult1 = bookShelf.searchByTitle("dune");
-    System.out.println("도서 제목: " + searchResult1.get(0).toString());
+    System.out.println("제목으로 도서 검색 결과: " + searchResult1.get(0).toString());
 
     List<Book<String>> searchResult2 = bookShelf.searchByAuthor("frank");
-    System.out.println("도서 저자: " + searchResult2.get(0).toString());
+    System.out.println("저자로 도서 검색 결과: " + searchResult2.get(0).toString());
 
     bookShelf.removeBook(searchResult2.get(0));
     List<Book<String>> result = bookShelf.searchByAuthor("frank");
-    System.out.println("도서 검색 결과: " + result.size());
+    System.out.println("삭제 후 도서 검색 결과: " + result.size());
 
     try {
       Book<Integer> peekedBook = bookStack.peekBook();
-      System.out.println(peekedBook.toString());
+      System.out.println("peekBook: " + peekedBook.toString());
     } catch (EmptyStackException e) {
       System.out.println("스택이 비었습니다.");
     }
 
     try {
       Book<Integer> poppedBook = bookStack.popBook();
-      System.out.println(poppedBook.toString());
+      System.out.println("popBook: " + poppedBook.toString());
 
+      // book stack 비우기
       bookStack.popBook();
       bookStack.popBook();
       bookStack.popBook();
@@ -70,6 +71,6 @@ public class Main {
       System.out.println("스택이 비었습니다.");
     }
 
-    System.out.println(bookStack.isEmpty());
+    System.out.println("스택이 비었나요?: " + bookStack.isEmpty());
   }
 }
